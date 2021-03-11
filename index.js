@@ -16,7 +16,7 @@ const router = include('routes/router');
 const port = process.env.PORT || 3000;
 
 database.getConnection((err, dbConnection) => {
-	if (err) {
+	if (!err) {
 		console.log("Successfully connected to MySQL");
 	}
 	else {
